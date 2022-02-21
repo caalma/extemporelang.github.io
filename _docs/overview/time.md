@@ -216,7 +216,7 @@ will have moved on. You should always try to schedule your code execution
 ;; This is best (callback happens 4100 samples earlier than new time)
 (define loop
   (lambda (time)
-    (play-note time synth 60 80 1.0)
+    (play-note time synth 60 80 44100)
     (callback (+ time 40000) 'loop (+ time 44100))))
 
 (loop (now))
